@@ -450,7 +450,7 @@ OPENSSL_EXPORT int BIO_set_fd(BIO *bio, int fd, int close_flag);
 OPENSSL_EXPORT int BIO_get_fd(BIO *bio, int *out_fd);
 
 /* BIO_set_state associates a black box with the bio. Useful if the bio is custom. */
-OPENSSL_EXPORT int BIO_set_state(BIO *bio, void *s, int close_flag);
+OPENSSL_EXPORT void BIO_set_state(BIO *bio, void *s, int close_flag);
 
 /* BIO_get_state fetches a black box associated with the bio. */
 OPENSSL_EXPORT void *BIO_get_state(BIO *bio);
